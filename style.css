@@ -55,7 +55,7 @@ nav img{
     text-align: center;
     font-weight: 600;
     font-size: 20px;
-    color: black;
+    color: #263238;
     background: transparent;
     border: 0;
     padding: var(--size-4) var(--size-8);
@@ -111,8 +111,7 @@ nav img{
 
 @media (width <= 600px) {
   nav {
-    background-color: lightseagreen;
-    color: white;
+    color: #263238;
   }
 
   nav h2 {
@@ -159,10 +158,12 @@ nav img{
 }
 
 #left h1{
+  color: #263238;
     margin: 0 0 30px 0;
   }
   
   #left p{
+    color: #263238;
     width: 88%;
     font-size: 16px;
     font-weight: 500;
@@ -187,7 +188,7 @@ nav img{
   }
   
   #left button:hover {
-    color: black;
+    color: #263238;
     filter: drop-shadow(5px 3px 10px #fff);
     --y: -10;
     --scale: 1.1;
@@ -205,4 +206,10 @@ nav img{
 #right{
     height: 100%;
     width: 45%;
+}
+
+#right img{
+  padding: 15px;
+  width: 100%;
+  object-fit: contain;
 }
