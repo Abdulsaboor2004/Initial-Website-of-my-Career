@@ -109,16 +109,19 @@ nav img {
   --border-scale: 0.9, 0.8;
 }
 
-
-#nav-left .ri-menu-3-line {
+#nav-left #hamburger-icon {
+  position: fixed;
+  z-index: 2;
   font-size: 1.5vw;
   filter: drop-shadow(5px 3px 10px #fff);
   display: none;
+  
 }
+
 
 /* Nav Link Style Ends */
 
-/* MEDIA QUERies*/
+/* MEDIA QUERies for NAV*/
 /* 800 & Less */
 
 @media (width <= 800px) {
@@ -146,11 +149,37 @@ nav img {
     display: none;
   }
 
-  #nav-left i {
+  #nav-left #hamburger-icon {
     display: block;
     font-size: 7vw;
   }
 }
+
+/* SideBar Css */
+
+#sidebar{
+  width: 340px;  /* I've set width through JS to 340px*/
+  height: 100%;
+  display: none; /* I've set display to flex*/
+  justify-content: center;
+  align-items: center;
+  text-align: end;
+  padding: 10px;
+  gap: 5px;
+  font-size: 16px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #f0808086;
+  box-shadow: 0 0 6px ;
+  transition: all 2s ease-in-out;
+  z-index: 1;
+  /* visibility: collapse; I've set visibility to visible*/
+  
+}
+
+
+
 
 /* Container Starts Here */
 
@@ -492,7 +521,4 @@ nav img {
   font-size: 15px;
   text-decoration: none;
 }
-
-
-
 

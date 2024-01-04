@@ -1,3 +1,6 @@
+
+
+
 // Tryna get navbar on every page
 
 var topbar = `<nav id="topbar">
@@ -7,13 +10,35 @@ var topbar = `<nav id="topbar">
   <a href="#">Contact</a>
   <a href="#">Services</a>
   <a href="./dashboard.html"><i style="font-size: 3vmax;" class="ri-account-circle-line"></i></a>
-  <a href="#"><i class="ri-menu-3-line"></i></a>
-</div>
+  <i id="hamburger-icon" class="ri-menu-3-line" onclick="sidebarToggle()"></i>
+  </div>
+  
+  
 </nav>`
 
 var nav = document.getElementById('topbar').innerHTML = topbar;
 
 
+
+// Tryna get Sidebar out of it's place (in mobile only)
+
+
+
+
+function sidebarToggle() {
+  var sidebar = document.querySelector("#sidebar");
+  if (sidebar.style.display === "none") {
+    
+    sidebar.style.display = "flex";
+    
+
+  } else {
+    
+    sidebar.style.display = "none";
+    
+  }
+  
+}
 
 // Sucessfully Done
 
