@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@500;600;700;800;900&family=Questrial&family=Sofia+Sans:wght@1;100;200;300;400;500;600;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
+
 * {
   margin: 0;
   padding: 0;
@@ -14,10 +15,32 @@ html {
 }
 
 ::selection {
-  /* color: lightcoral; */
-
+  /* color: lightcoral; */ 
   background-color: #f9d9d9;
 }
+
+/* CUstom ScrollBar */
+*::-webkit-scrollbar {
+  width: 8px; /* You can adjust the width as needed */
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #ccc;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #808080;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #f08080;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #f08080;
+}
+
+/* Main starts here */
 
 .main {
   height: 100%;
@@ -55,9 +78,11 @@ nav img {
 }
 
 /* Nav Links Style Start */
-
-#nav-left h3 {
+#nav-left i,
+#nav-left a {
   text-align: center;
+  text-decoration: none;
+  cursor: pointer;
   font-weight: 600;
   font-size: 20px;
   color: #263238;
@@ -68,7 +93,8 @@ nav img {
   transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-#nav-left h3:hover {
+#nav-left i:hover, 
+#nav-left a:hover {
   color: lightcoral;
   filter: drop-shadow(5px 3px 10px #fff);
   --y: -10;
@@ -76,17 +102,15 @@ nav img {
   --border-scale: 1;
 }
 
-#nav-left h3:active {
+#nav-left i:active,
+#nav-left a:active {
   --y: 5%;
   --scale: 0.9;
   --border-scale: 0.9, 0.8;
 }
 
-#nav-left h3 {
-  cursor: pointer;
-}
 
-#nav-left i {
+#nav-left .ri-menu-3-line {
   font-size: 1.5vw;
   filter: drop-shadow(5px 3px 10px #fff);
   display: none;
@@ -102,7 +126,7 @@ nav img {
     gap: 12px;
   }
 
-  #nav-left h3 {
+  #nav-left a {
     font-size: 16px;
   }
 }
@@ -118,7 +142,7 @@ nav img {
     font-size: 3vmax;
   }
 
-  #nav-left h3 {
+  #nav-left a {
     display: none;
   }
 
@@ -382,3 +406,93 @@ nav img {
     width: 100%;
   }
 }
+
+
+
+
+
+
+
+
+/* Dashboard's Css is Here */
+
+#dashboard-content{
+  
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-items: center;
+  padding: 2%;
+
+}
+
+#profile-section{
+  
+  width: 100%;
+  height: 50%;
+  background-color: #263238;
+  border-radius: 23px;
+}
+
+#profile-image{
+  position: relative;
+  width: clamp(85px, 17vh, 200px);
+  height: clamp(85px, 17vh, 200px);
+  border-radius: 50%;
+  
+}
+
+#profile-section-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-top-left-radius: 23px ;
+  border-top-right-radius: 23px;
+  height: 40%;
+  width: 100%;
+  background-color: #f08080;
+}
+
+#profile-image img{
+  top: 50%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  outline: #f08080 5px solid;
+}
+
+#profile-section-bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 60%;
+  text-align: center;
+  color: #ccc;
+}
+
+#profile-section-bottom button{
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 23px;
+  background-color: #f08080;
+  position: absolute;
+  top: 52%;
+}
+
+#profile-section-bottom button a{
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+
+
+
