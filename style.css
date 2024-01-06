@@ -163,22 +163,49 @@ nav img {
   display: none; /* I've set display to flex*/
   justify-content: center;
   align-items: center;
-  text-align: end;
   padding: 10px;
-  gap: 5px;
-  font-size: 16px;
+ 
   position: fixed;
   right: 0;
   top: 0;
-  background: #f0808086;
+  background-image: linear-gradient(#f08080de, #ff6b6b, #e87373de);
   box-shadow: 0 0 6px ;
-  transition: all 2s ease-in-out;
+  transition: all .4s ease-in-out;
   z-index: 1;
-  /* visibility: collapse; I've set visibility to visible*/
+  
   
 }
 
+#sidebar-content {
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+}
 
+#sidebar-links{
+  width: 100%;
+  height: 100%;
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#sidebar-links a{
+  font-size: 35px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+#sidebar-socials{
+  transform: translate(0, -50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-size: 6vmax;
+}
 
 
 /* Container Starts Here */
@@ -236,6 +263,7 @@ nav img {
   transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+#sidebar-links a:hover,
 #left button:hover {
   color: #263238;
   filter: drop-shadow(5px 3px 10px #fff);
@@ -459,7 +487,7 @@ nav img {
 #profile-section{
   
   width: 100%;
-  height: 50%;
+  height: 54%;
   background-color: #263238;
   border-radius: 23px;
 }
@@ -503,17 +531,19 @@ nav img {
   height: 60%;
   text-align: center;
   color: #ccc;
+  
 }
 
 #profile-section-bottom button{
+  
   padding: 15px;
-  font-size: 16px;
+  font-size: 15px;
   border: none;
   outline: none;
   border-radius: 23px;
   background-color: #f08080;
   position: absolute;
-  top: 52%;
+  top: 55%;
 }
 
 #profile-section-bottom button a{
@@ -521,4 +551,7 @@ nav img {
   font-size: 15px;
   text-decoration: none;
 }
+
+
+/* No Media Query for Dashboard CSS */
 
